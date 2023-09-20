@@ -8,4 +8,3 @@ RUN npm run build
 
 FROM nginx:1.21.1-alpine AS prod-stage
 COPY --from=builder /app/build /usr/share/nginx/html
-EXPOSE 80
